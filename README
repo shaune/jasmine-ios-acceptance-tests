@@ -6,3 +6,6 @@ This example was only possible because of the great work surrounding the followi
 - jasmine-iphone
 
 My version of the jasmine-uiautomation.js script was taken from pivotal/jasmine-iphone I just removed the jasmine dep.
+
+<b>Usage</b>
+./build.sh ci.js <absolute path to app>/build/Debug-iphonesimulator/UITest.app
