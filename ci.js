@@ -1,7 +1,7 @@
 // load dependencies
 #import "ext/jasmine-uiautomation.js"
 #import "ext/jasmine-reporters/ext/jasmine.js"
-#import "ext/reporter/jasmine.uiautomation_junit_reporter.js"
+#import "reporter/jasmine.uiautomation_junit_reporter.js"
 #import "ext/jasmine-main-thread.js"
 
 // load test specs
