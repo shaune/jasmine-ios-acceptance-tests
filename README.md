@@ -11,4 +11,8 @@ This example was only possible because of the great work surrounding the followi
 My version of the jasmine-uiautomation.js script was taken from pivotal/jasmine-iphone I just removed the jasmine dep.
 
 Usage
-./runTests.sh ci.js <absolute path to app>/build/Debug-iphonesimulator/UITest.app
+-----
+
+    ./runTests.sh ci.js <absolute path to app>/build/Debug-iphonesimulator/UITest.app
+
+
