@@ -1,6 +1,6 @@
-describe("UITest - home screen", function() {
+describe("BasicApp - First Screen", function() {
  
-   it("can display an alert message when the alert button is pressed.", function() {
-      
+   it("flick the switch on and off", function() {
+      UIATarget.localTarget().frontMostApp().mainWindow().switches()["switch"].setValue(true);
    });  
 });
