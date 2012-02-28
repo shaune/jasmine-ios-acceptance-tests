@@ -75,10 +75,14 @@
                 if (result.type == 'expect' && result.passed && !result.passed()) {
                     failures += 1;
                     failure += (failures + ": " + escapeInvalidXmlChars(result.message) + " ");
+                    UIALogger.logFail(result.message);
                 }
             }
             if (failure) {
                 spec.output += "<failure>" + trim(failure) + "</failure>";
+                UIALogger.logFail(spec.description);
+            } else {
+                UIALogger.logPass(spec.description);
             }
             spec.output += "</testcase>";
         },
