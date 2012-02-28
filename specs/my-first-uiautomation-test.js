@@ -1,5 +1,4 @@
 describe("BasicApp - First Screen", function() {
- 
  	var target = UIATarget.localTarget();
  	var mainWindow = target.frontMostApp().mainWindow();
 
