@@ -12,6 +12,7 @@ My version of the jasmine-uiautomation.js script was taken from pivotal/jasmine-
 
 Usage
 -----
+Simply run the following shell script point it to your root js test file and the app you want to test against and it will launch the iPhone Simulator
 
     ./runTests.sh ci.js <absolute path to app>/build/Debug-iphonesimulator/UITest.app
 
