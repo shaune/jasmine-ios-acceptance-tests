@@ -1,6 +1,7 @@
 #! /bin/sh
 
-TRACETEMPLATE="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Instruments/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate"
+XCODE_PATH=`xcode-select -print-path`
+TRACETEMPLATE="$XCODE_PATH/Platforms/iPhoneOS.platform/Developer/Library/Instruments/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate"
 BASE_TEST_SCRIPT=$1
 APP_LOCATION=$2
 DEVICE_ID=$3
