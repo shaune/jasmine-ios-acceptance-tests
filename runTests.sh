@@ -1,8 +1,9 @@
 #! /bin/sh
 
-TRACETEMPLATE="/Developer/Platforms/iPhoneOS.platform/Developer/Library/Instruments/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate"
+TRACETEMPLATE="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Instruments/PlugIns/AutomationInstrument.bundle/Contents/Resources/Automation.tracetemplate"
 BASE_TEST_SCRIPT=$1
 APP_LOCATION=$2
+DEVICE_ID=$3
 
 if [ ! $# -gt 1 ]; then
 	echo "You must specify the app location and the test file."
@@ -16,7 +17,12 @@ if [ ! -d "test-reports" ]; then
 fi
 
 # Kick off the instruments build
-instruments -t $TRACETEMPLATE $APP_LOCATION -e UIASCRIPT $BASE_TEST_SCRIPT -e UIARESULTSPATH /var/tmp | grep "<"  > test-reports/test-results.xml
+instruments \
+-w $DEVICE_ID \
+-t $TRACETEMPLATE \
+$APP_LOCATION \
+-e UIASCRIPT $BASE_TEST_SCRIPT \
+-e UIARESULTSPATH /var/tmp | grep "<"  > test-reports/test-results.xml
 
 # cleanup the tracefiles produced from instruments
 rm -rf *.trace
