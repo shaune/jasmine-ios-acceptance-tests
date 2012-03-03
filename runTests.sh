@@ -8,8 +8,15 @@ DEVICE_ID=$3
 
 if [ ! $# -gt 1 ]; then
 	echo "You must specify the app location and the test file."
-	echo "\t eg. ./build.sh suite.js <xcodeproject directory>/build/Debug-iphonesimulator/myapp.app"
+	echo "\t (optionally supply unique device ID of physical iOS device)"
+	echo "\t eg. ./build.sh suite.js <xcodeproject directory>/build/Debug-iphonesimulator/myapp.app <device-udid>"
 	exit -1
+fi
+
+# If running on device, only need name of app, full path not important
+if [ ! "$DEVICE_ID" = "" ]; then
+  RUN_ON_SPECIFIC_DEVICE_OPTION="-w $DEVICE_ID"
+  APP_LOCATION=`basename $APP_LOCATION`
 fi
 
 # Create junit reporting directory
@@ -19,7 +26,7 @@ fi
 
 # Kick off the instruments build
 instruments \
--w $DEVICE_ID \
+$RUN_ON_SPECIFIC_DEVICE_OPTION \
 -t $TRACETEMPLATE \
 $APP_LOCATION \
 -e UIASCRIPT $BASE_TEST_SCRIPT \
