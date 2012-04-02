@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jasmine-ios-acceptance-tests by shaune</title>
+    
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Jasmine-ios-acceptance-tests</h1>
+        <p>UI Automation + Jasmine  driven acceptance tests that can be hooked into Jenkins</p>
+        <p class="view"><a href="https://github.com/shaune/jasmine-ios-acceptance-tests">View the Project on GitHub <small>shaune/jasmine-ios-acceptance-tests</small></a></p>
+        <ul>
+          <li><a href="https://github.com/shaune/jasmine-ios-acceptance-tests/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/shaune/jasmine-ios-acceptance-tests/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/shaune/jasmine-ios-acceptance-tests">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>UI Automation + Jasmine template</h1>
+
+<p>A super simple way to create iOS acceptance tests and generate JUnit output that can be read by Jenkins.</p>
+
+<p>This example was only possible because of the great work surrounding the following github projects:</p>
+
+<ul>
+<li><a href="https://github.com/pivotal/jasmine">jasmine</a></li>
+<li><a href="https://github.com/larrymyers/jasmine-reporters">jasmine-reporters</a></li>
+<li><a href="https://github.com/pivotal/jasmine-iphone">jasmine-iphone</a></li>
+</ul><p>My version of the jasmine-uiautomation.js script was taken from pivotal/jasmine-iphone I just removed the jasmine dep.</p>
+
+<h2>Usage</h2>
+
+<p>Simply run the following shell script point it to your root js test file and the app you want to test against and it will launch the iPhone Simulator</p>
+
+<pre><code>./runTests.sh ci.js &lt;absolute path to app&gt;/build/Debug-iphonesimulator/UITest.app
+</code></pre>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/shaune">shaune</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>
